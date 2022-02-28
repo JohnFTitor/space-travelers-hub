@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import MyProfile from './components/MyProfile';
@@ -11,8 +11,8 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<h1>I&aphos;m the main page </h1>} />
-          <Route path="/profile" element={<MyProfile />} />
+          <Route exact path="/" element={<h1>I&aphos;m the main page </h1>} />
+          <Route exact path="/profile" element={<MyProfile />} />
         </Routes>
       </main>
     </div>
