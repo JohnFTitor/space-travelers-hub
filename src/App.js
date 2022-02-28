@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import MyProfile from './components/MyProfile';
 import RocketsPage from './components/RocketsPage';
+import Missions from './components/Missions';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<RocketsPage />} />
+          <Route exact path="missions" element={<Missions />} />
           <Route exact path="/profile" element={<MyProfile />} />
         </Routes>
       </main>
