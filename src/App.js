@@ -2,6 +2,7 @@ import './styles/App.scss';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import MyProfile from './components/MyProfile';
+import RocketsPage from './components/RocketsPage';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route exact path="/" element={<h1>I&aphos;m the main page </h1>} />
+          <Route exact path="/" element={<RocketsPage />} />
           <Route exact path="/profile" element={<MyProfile />} />
         </Routes>
       </main>
