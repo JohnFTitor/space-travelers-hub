@@ -1,6 +1,29 @@
 @import 'variables';
 
-.nav-link {
-  text-decoration: none;
-  color: $blue-color;
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  &-parent {
+    justify-content: space-between;
+  }
+
+  &-child {
+    .nav-link {
+      text-decoration: none;
+      color: $blue-color;
+      font-size: 2rem;
+      padding: 0 2rem;
+    }
+
+    #profile {
+      border-left: 3px solid black;
+    }
+  }
 }

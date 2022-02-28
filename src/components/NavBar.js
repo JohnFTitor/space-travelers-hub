@@ -9,9 +9,9 @@ const NavBar = () => {
 
   return (
     <>
-      <nav>
+      <nav className="nav nav-parent">
         <h1>Space travelers&apos; hub</h1>
-        <ul>
+        <ul className="nav nav-child">
           <li>
             <NavLink
               to="/"
@@ -34,6 +34,7 @@ const NavBar = () => {
           </li>
           <li>
             <NavLink
+              id="profile"
               to="/profile"
               className="nav-link"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
