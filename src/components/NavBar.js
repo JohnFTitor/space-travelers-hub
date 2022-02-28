@@ -1,21 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => (
   <>
     <nav>
-      <h1>Space travelers' hub</h1>
-      {/* <ul>
+      <h1>Space travelers&apos; hub</h1>
+      <ul>
         <li>
-          <Link>Rockets</Link>
+          <NavLink to="/">Rockets</NavLink>
         </li>
         <li>
-          <Link>Missions</Link>
+          <NavLink to="missions">Missions</NavLink>
         </li>
         <li>
-          <Link>My profile</Link>
+          <NavLink to="profile">My profile</NavLink>
         </li>
-      </ul> */}
+      </ul>
     </nav>
   </>
 );
