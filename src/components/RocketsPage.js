@@ -14,6 +14,7 @@ function RocketsPage() {
             name={rocket.rocket_name}
             desc={rocket.description}
             img={rocket.flickr_images}
+            id={rocket.id}
           />
         ))}
       </ul>

@@ -24,7 +24,7 @@ RenderRocket.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default RenderRocket;
