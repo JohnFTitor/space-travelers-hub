@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../redux/missions/missions';
 
-const Missions = () => {
+const MissionsPage = () => {
   const status = useSelector((state) => state.missions.status);
   const dispatch = useDispatch();
 
@@ -19,4 +19,4 @@ const Missions = () => {
   );
 };
 
-export default Missions;
+export default MissionsPage;
