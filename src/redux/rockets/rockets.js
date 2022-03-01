@@ -8,7 +8,7 @@ const addRocket = (payload) => ({
 });
 
 export function filterRocketInfo() {
-  return (dispatch) => {
+  return function (dispatch) {
     const url = 'https://api.spacexdata.com/v3/rockets';
     fetch(url)
       .then((res) => res.json())
