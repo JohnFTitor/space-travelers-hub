@@ -11,16 +11,14 @@ tr {
 }
 
 th {
+  padding: 10px;
+  border: 1px solid $gray-color;
+
   p {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 1.5;
   }
-}
-
-th {
-  padding: 10px;
-  border: 1px solid $gray-color;
 }
 
 .badge,
@@ -59,5 +57,5 @@ tbody {
     th {
       background-color: $gray-light;
     }
-  };
+  }
 }
