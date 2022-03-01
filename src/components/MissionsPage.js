@@ -14,7 +14,15 @@ const MissionsPage = () => {
 
   return (
     <section>
-      <h2>Missions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th> Mission </th>
+            <th> Description </th>
+            <th> Status </th>
+          </tr>
+        </thead>
+      </table>
     </section>
   );
 };
