@@ -3,7 +3,6 @@
 .nav {
   display: flex;
   align-items: center;
-  padding: 2.5rem;
 
   h1 {
     font-size: 4rem;
@@ -12,6 +11,10 @@
 
   &-parent {
     justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0 20px 0;
+    border-bottom: 2px solid #efefef;
   }
 
   &-child {
@@ -25,5 +28,14 @@
     #profile {
       border-left: 3px solid black;
     }
+  }
+}
+
+.logo-container {
+  display: flex;
+
+  .planet {
+    width: 50px;
+    height: auto;
   }
 }

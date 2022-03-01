@@ -1,9 +1,25 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import RenderRocket from './RenderRocket';
+import '../styles/RenderRocket.scss';
 
-const RocketsPage = () => (
-  <section>
-    <h2> Rockets Page </h2>
-  </section>
-);
+function RocketsPage() {
+  const rocketsColl = useSelector((state) => state.rocketsReducer);
+  return (
+    <section>
+      <ul>
+        {rocketsColl.map((rocket) => (
+          <RenderRocket
+            key={rocket.id}
+            name={rocket.rocket_name}
+            desc={rocket.description}
+            img={rocket.flickr_images}
+            id={rocket.id}
+          />
+        ))}
+      </ul>
+    </section>
+  );
+}
 
 export default RocketsPage;

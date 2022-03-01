@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/navigation.scss';
+import Planet from '../assets/planet.png';
 
 const NavBar = () => {
   const activeStyle = {
@@ -10,7 +11,10 @@ const NavBar = () => {
   return (
     <>
       <nav className="nav nav-parent">
-        <h1>Space travelers&apos; hub</h1>
+        <div className="logo-container">
+          <img className="planet" src={Planet} alt="planet" />
+          <h1>Space travelers&apos; hub</h1>
+        </div>
         <ul className="nav nav-child">
           <li>
             <NavLink

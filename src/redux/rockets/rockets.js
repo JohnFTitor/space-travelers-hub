@@ -8,7 +8,7 @@ const addRocket = (payload) => ({
 });
 
 export function filterRocketInfo() {
-  return (dispatch) => {
+  return function (dispatch) {
     const url = 'https://api.spacexdata.com/v3/rockets';
     fetch(url)
       .then((res) => res.json())
@@ -17,7 +17,7 @@ export function filterRocketInfo() {
           id: item.id,
           rocket_name: item.rocket_name,
           description: item.description,
-          flickr_images: item.flickr_images,
+          flickr_images: item.flickr_images[0],
         };
         dispatch(addRocket(newRocket));
       }));
