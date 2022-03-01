@@ -1,11 +1,17 @@
 const ADD_MISSIONS = 'spaceTravelersHub/missions/ADD_MISSION';
+const COMPLETE_STATUS = 'spaceTravelersHub/missions/COMPLETE_STATUS';
 
-const initialState = [];
+const initialState = {
+  data: [],
+  status: 'iddle',
+};
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MISSIONS:
-      return [...state, action.payload];
+      return { ...state, data: [...state.data, ...action.payload] };
+    case COMPLETE_STATUS:
+      return { ...state, status: 'completed' };
     default:
       return state;
   }
@@ -18,9 +24,13 @@ const addMissions = (missionsArray) => ({
   payload: missionsArray,
 });
 
-export { addMissions };
+const completeStatus = () => ({
+  type: COMPLETE_STATUS,
+});
 
-const getMissions = async (dispatch) => {
+export { addMissions, completeStatus };
+
+const getMissions = () => (async (dispatch) => {
   const response = await fetch('https://api.spacexdata.com/v3/missions');
   const data = await response.json();
   const missionsArray = data.map((mission) => ({
@@ -29,6 +39,7 @@ const getMissions = async (dispatch) => {
     description: mission.description,
   }));
   dispatch(addMissions(missionsArray));
-};
+  dispatch(completeStatus());
+});
 
 export { getMissions };

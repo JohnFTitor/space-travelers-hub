@@ -1,9 +1,16 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMissions } from '../redux/missions/missions';
 
 const Missions = () => {
-  const missions = useSelector((state) => state.missionsReducer[0]);
-  console.log(missions);
+  const status = useSelector((state) => state.missions.status);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (status === 'iddle') {
+      dispatch(getMissions());
+    }
+  }, [status, dispatch]);
 
   return (
     <section>

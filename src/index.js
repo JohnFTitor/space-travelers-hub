@@ -6,9 +6,6 @@ import './styles/reset.scss';
 import './styles/index.scss';
 import App from './App';
 import store from './redux/configStore';
-import { getMissions } from './redux/missions/missions';
-
-store.dispatch(getMissions);
 
 ReactDOM.render(
   <React.StrictMode>
