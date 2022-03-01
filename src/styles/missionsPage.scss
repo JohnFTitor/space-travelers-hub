@@ -1,0 +1,63 @@
+@import 'variables';
+
+.missions {
+  padding: 5rem;
+}
+
+tr {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+th {
+  p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+
+th {
+  padding: 10px;
+  border: 1px solid $gray-color;
+}
+
+.badge,
+.join {
+  vertical-align: middle;
+}
+
+.badge {
+  span {
+    display: block;
+    text-transform: uppercase;
+    color: rgb(250, 250, 250);
+    background-color: gray;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+    white-space: nowrap;
+  }
+}
+
+.join {
+  padding: 30px;
+
+  button {
+    font-family: 'Lato', sans-serif;
+    border: 1px solid gray;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+tbody {
+  :nth-child(odd) {
+    th {
+      background-color: $gray-light;
+    }
+  };
+}

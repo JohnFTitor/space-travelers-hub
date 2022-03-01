@@ -7,11 +7,16 @@ const MissionRow = (props) => {
   return (
     <tr>
       <th>{name}</th>
-      <th>{description}</th>
       <th>
+        <p>
+          {description}
+        </p>
+        <br />
+      </th>
+      <th className="badge">
         <span>not a member</span>
       </th>
-      <th>
+      <th className="join">
         <button type="button">
           Join Mission
         </button>

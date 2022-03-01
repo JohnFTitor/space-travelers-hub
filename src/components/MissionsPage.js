@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../redux/missions/missions';
+import '../styles/missionsPage.scss';
 import MissionRow from './MissionRow';
 
 const MissionsPage = () => {
@@ -15,13 +16,14 @@ const MissionsPage = () => {
   }, [status, dispatch]);
 
   return (
-    <section>
+    <section className="missions">
       <table>
         <thead>
           <tr>
             <th> Mission </th>
             <th> Description </th>
             <th> Status </th>
+            <th> </th>
           </tr>
         </thead>
         <tbody>
