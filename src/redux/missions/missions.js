@@ -23,6 +23,17 @@ const addMissions = (missionsArray) => ({
 
 export { addMissions };
 
-// const fetchApi = () => {
-//   fetch('https://api.spacexdata.com/v3/missions').then((response) => response.json()).then((data) => console.log(data));
-// };
+const getMissions = () => (
+  async (dispatch) => {
+    const response = await fetch('https://api.spacexdata.com/v3/missions');
+    const data = await response.json();
+    const missionsArray = data.map((mission) => ({
+      mission_id: mission.mission_id,
+      mission_name: mission.mission_name,
+      description: mission.description,
+    }));
+    dispatch(addMissions(missionsArray));
+  }
+);
+
+export { getMissions };
