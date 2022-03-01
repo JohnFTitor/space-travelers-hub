@@ -34,8 +34,8 @@ const getMissions = () => (async (dispatch) => {
   const response = await fetch('https://api.spacexdata.com/v3/missions');
   const data = await response.json();
   const missionsArray = data.map((mission) => ({
-    mission_id: mission.mission_id,
-    mission_name: mission.mission_name,
+    id: mission.mission_id,
+    name: mission.mission_name,
     description: mission.description,
   }));
   dispatch(addMissions(missionsArray));
