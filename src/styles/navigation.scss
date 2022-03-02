@@ -11,10 +11,10 @@
 
   &-parent {
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding: 10px 0 20px 0;
-    border-bottom: 2px solid #efefef;
+    border-bottom: 2px solid $gray-color;
   }
 
   &-child {
@@ -33,9 +33,11 @@
 
 .logo-container {
   display: flex;
+  align-items: center;
 
   .planet {
-    width: 50px;
-    height: auto;
+    width: 70px;
+    height: 100%;
+    margin-right: 2rem;
   }
 }
