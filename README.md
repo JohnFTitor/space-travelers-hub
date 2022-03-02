@@ -2,11 +2,11 @@
 
 # Space Travelers' Hub
 
-> This is a library project built using React with the main objective of learning how to use Redux with React. This is accomplished by holding a global state of the books displayed in the list, which are at the same time retrieved from an external API.
+> This is a React-Redux based project, built with pair programming and gitflow, following [this kanban workflow](https://github.com/JohnFTitor/space-travelers-hub/projects/1). The page have a global state that holds the Rockets and missions from the spaceX API, and allow you to reserve them, displaying on your profile section the missions that you own.
 
 ![Preview](./preview.gif)
 
-Keep track of the books you've read through this library React Webpage. You can add them by writing their title and specifying their category. All the data will be displayed and sent to an external server. Share your books among all users! 
+Take a view on the spaceX rockets and missions, reserve them and have a register of what you reserved for yourself in your profile! The page will render dinamically in your profile when you reserve or cancel the missions and rockets from the oficial spaceX API
 
 ## Live Version 
 
