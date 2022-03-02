@@ -1,7 +1,10 @@
 import React from 'react';
+import ProfileRockets from './ProfileRockets';
 
 const MyProfile = () => (
-  <h1> I exist </h1>
+  <section>
+    <ProfileRockets />
+  </section>
 );
 
 export default MyProfile;
