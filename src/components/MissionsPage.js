@@ -32,6 +32,7 @@ const MissionsPage = () => {
               key={mission.id}
               name={mission.name}
               description={mission.description}
+              id={mission.id}
             />
           ))}
         </tbody>
