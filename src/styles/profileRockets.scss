@@ -1,0 +1,32 @@
+.rockets_container {
+  width: 40%;
+  margin: auto;
+
+  h2 {
+    font-weight: bold;
+  }
+
+  ul {
+    border: 1px solid #000;
+    border-radius: 3px;
+    width: 80%;
+    margin: 15px 0;
+
+    li {
+      font-size: 30px;
+      font-weight: lighter;
+      margin: 10px 0;
+      padding: 10px 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.384);
+    }
+
+    :last-child {
+      border-bottom: none;
+      padding-bottom: 10px;
+    }
+
+    :first-child {
+      padding-top: 10px;
+    }
+  }
+}
