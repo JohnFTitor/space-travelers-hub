@@ -1,6 +1,6 @@
 const ADD_MISSIONS = 'spaceTravelersHub/missions/ADD_MISSION';
 const COMPLETE_STATUS = 'spaceTravelersHub/missions/COMPLETE_STATUS';
-const JOIN_MISSION = 'spaceTravelersHub/missions/JOIN_MISSION';
+const TOGGLE_MISSION = 'spaceTravelersHub/missions/TOGGLE_MISSION';
 
 const initialState = {
   data: [],
@@ -13,10 +13,10 @@ const reducer = (state = initialState, action) => {
       return { ...state, data: [...state.data, ...action.payload] };
     case COMPLETE_STATUS:
       return { ...state, status: 'completed' };
-    case JOIN_MISSION: {
+    case TOGGLE_MISSION: {
       const newState = state.data.map((mission) => {
         if (mission.id !== action.id) return mission;
-        return { ...mission, reserved: true };
+        return { ...mission, reserved: !mission.reserved };
       });
       return { ...state, data: [...newState] };
     }
@@ -33,7 +33,7 @@ const addMissions = (missionsArray) => ({
 });
 
 export const joinMission = (id) => ({
-  type: JOIN_MISSION,
+  type: TOGGLE_MISSION,
   id,
 });
 

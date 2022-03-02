@@ -33,6 +33,7 @@ const MissionsPage = () => {
               name={mission.name}
               description={mission.description}
               id={mission.id}
+              reserved={mission.reserved}
             />
           ))}
         </tbody>
