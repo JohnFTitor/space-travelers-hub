@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
     case RESERVE: {
       const newState = [...state];
-      newState[action.payload - 1].reserved = true;
+      newState[action.payload - 1].reserved = !newState[action.payload - 1].reserved;
       return newState;
     }
     default:
