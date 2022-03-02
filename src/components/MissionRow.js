@@ -4,7 +4,12 @@ import { useDispatch } from 'react-redux';
 import { joinMission } from '../redux/missions/missions';
 
 const MissionRow = (props) => {
-  const { name, description, id } = props;
+  const {
+    name,
+    description,
+    id,
+    reserved,
+  } = props;
   const dispatch = useDispatch();
 
   const handleClick = (e) => {
@@ -19,10 +24,15 @@ const MissionRow = (props) => {
         <br />
       </th>
       <th className="badge">
-        <span>not a member</span>
+        {!reserved && (
+          <span>not a member</span>
+        )}
+        {reserved && (
+          <span className="member">active member</span>
+        )}
       </th>
       <th className="join">
-        <button onClick={(e) => handleClick(e)} id={id} type="button">
+        <button onClick={handleClick} id={id} type="button">
           Join Mission
         </button>
       </th>
@@ -36,4 +46,5 @@ MissionRow.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };

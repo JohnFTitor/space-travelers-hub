@@ -33,10 +33,18 @@ th {
     color: rgb(250, 250, 250);
     background-color: gray;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 800;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px 5px;
     white-space: nowrap;
+    letter-spacing: 0.5px;
+  }
+
+  .member {
+    background-color: $blue-green;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.3rem;
   }
 }
 
@@ -47,7 +55,7 @@ th {
     font-family: 'Lato', sans-serif;
     border: 1px solid gray;
     white-space: nowrap;
-    padding: 10px;
+    padding: 7px 10px;
     border-radius: 5px;
   }
 }
