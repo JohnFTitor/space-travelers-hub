@@ -2,10 +2,15 @@
 
 .main-container {
   display: flex;
+  gap: 30px;
   padding: 5rem;
 
   div {
     flex: 1 1;
+  }
+
+  h2 {
+    font-weight: bold;
   }
 }
 
@@ -16,8 +21,9 @@
   border-radius: 10px;
 
   .mission {
-    font-size: 2rem;
-    padding: 20px 30px 60px 30px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding: 20px 30px 40px 30px;
     width: 100%;
     border-bottom: 1px solid $gray-color;
   }
