@@ -10,8 +10,7 @@ Take a view on the spaceX rockets and missions, reserve them and have a register
 
 ## Live Version 
 
-[Netlify](https://jfbook-store.netlify.app) <br/>
-[Heroku](https://jfbook-store.herokuapp.com/)
+[Netlify](https://jf-ls-space-travelers-hub.netlify.app/)
 
 ## Built With
 
