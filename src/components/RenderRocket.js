@@ -10,7 +10,7 @@ const RenderRocket = (
 ) => {
   const dispatch = useDispatch();
 
-  const toggleReserve = (event) => {
+  const clickHandler = (event) => {
     const { id } = event.target;
     dispatch(reserveRocket(id));
   };
@@ -23,7 +23,7 @@ const RenderRocket = (
       <div className="rocket-info">
         <h2>{name}</h2>
         <p>{desc}</p>
-        <button type="button" id={id} onClick={toggleReserve}>
+        <button type="button" id={id} onClick={clickHandler}>
           Reserve rocket
         </button>
       </div>
