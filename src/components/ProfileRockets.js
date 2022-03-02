@@ -9,9 +9,13 @@ const ProfileRockets = () => {
     <div className="rockets_container">
       <h2>My rockets</h2>
       <ul>
-        {rocketStore.map((rocket) => (
-          <li className="Rocket-li-profile" key={rocket.id}>{rocket.rocket_name}</li>
-        ))}
+        {rocketStore.length > 0 ? (
+          rocketStore.map((rocket) => (
+            <li className="Rocket-li-profile" key={rocket.id}>{rocket.rocket_name}</li>
+          ))
+        ) : (
+          <li className="Rocket-li-profile">You haven&apos;t reserved any rocket</li>
+        )}
       </ul>
     </div>
   );
