@@ -1,7 +1,11 @@
 import React from 'react';
+import JoinedMissions from './JoinedMissions';
+import '../styles/myProfilePage.scss';
 
 const MyProfile = () => (
-  <h1> I exist </h1>
+  <section className="main-container">
+    <JoinedMissions />
+  </section>
 );
 
 export default MyProfile;

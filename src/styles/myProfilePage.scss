@@ -1,0 +1,28 @@
+@import 'variables';
+
+.main-container {
+  display: flex;
+  padding: 5rem;
+
+  div {
+    flex: 1 1;
+  }
+}
+
+.missions-container {
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid $gray-color;
+  border-radius: 10px;
+
+  .mission {
+    font-size: 2rem;
+    padding: 20px 30px 60px 30px;
+    width: 100%;
+    border-bottom: 1px solid $gray-color;
+  }
+
+  :last-child {
+    border: none;
+  }
+}
