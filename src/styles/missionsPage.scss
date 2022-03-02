@@ -58,6 +58,11 @@ th {
     padding: 7px 10px;
     border-radius: 5px;
   }
+
+  .leaving {
+    border-color: $red-dark;
+    color: $red-dark;
+  }
 }
 
 tbody {
