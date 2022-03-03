@@ -5,34 +5,15 @@ import {
   fireEvent,
   screen,
   cleanup,
-} from '@testing-library/react';
+} from './test-util';
 import App from '../App';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunk from 'redux-thunk';
-import missions from '../redux/missions/missions';
-import rocketsReducer from '../redux/rockets/rockets';
 import '@testing-library/jest-dom';
-
-const reducer = combineReducers({
-  missions,
-  rocketsReducer,
-});
-
-const store = createStore(reducer, applyMiddleware(thunk));
 
 afterEach(() => cleanup());
 
 describe('Rockets and profile rockets', () => {
   test('Rockets are rendering', async () => {
-    const { container } = render(
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    );
+    const { container } = render(<App />);
 
     await waitFor(() => screen.getByText('Falcon 1'));
 
@@ -40,15 +21,7 @@ describe('Rockets and profile rockets', () => {
   });
 
   it('Profile renders reservations', async () => {
-    render(
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    );
-
-    fireEvent.click(screen.getByText('Rockets'));
+    render(<App />);
 
     await waitFor(() => screen.getByText('Falcon 1'));
 
@@ -61,13 +34,7 @@ describe('Rockets and profile rockets', () => {
 });
 
 it('NavBar changes the section', async () => {
-  render(
-    <BrowserRouter>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </BrowserRouter>
-  );
+  render(<App />);
 
   fireEvent.click(screen.getByText('Missions'));
 
