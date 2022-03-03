@@ -50,6 +50,10 @@ To work on the project, run ```npm start``` in your terminal to deploy a live ve
 
 Linter Checks are automatically run with Github actions when there's a pull request. If you want to run them locally, remember to have the config file in the root of the local project.
 
+## Testing
+
+Run ```npm test``` to check prepared test cases related to the website functionality simulating user interaction. Remember to update the snapshots if you make changes to the UI.
+
 ## Deployment
 
 Netlify is set to automatically deploy the production branch (main branch) of this project, so you don't need to worry about it.
