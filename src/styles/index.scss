@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+main {
+  padding-top: 100px;
+}

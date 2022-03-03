@@ -1,0 +1,43 @@
+@import 'variables';
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  &-parent {
+    justify-content: space-between;
+    width: 95%;
+    margin: auto;
+    padding: 10px 0 20px 0;
+    border-bottom: 2px solid $gray-color;
+  }
+
+  &-child {
+    .nav-link {
+      text-decoration: none;
+      color: $blue-color;
+      font-size: 2rem;
+      padding: 0 2rem;
+    }
+
+    #profile {
+      border-left: 3px solid $gray-color;
+    }
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  .planet {
+    width: 70px;
+    height: 100%;
+    margin-right: 2rem;
+  }
+}

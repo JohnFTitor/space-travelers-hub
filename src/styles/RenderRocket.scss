@@ -1,0 +1,86 @@
+@import 'variables';
+
+.rocket-li {
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+  gap: 3.125rem;
+
+  .img-container > img {
+    width: 300px;
+    height: auto;
+  }
+
+  .reserved-txt {
+    background-color: $blue-color;
+    padding: 1px 3px;
+    width: 10px;
+    border-radius: 5px;
+    margin: 0 7px 0 1px;
+    color: #fff;
+  }
+
+  .rocket-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h2 {
+      font-size: 45px;
+      font-weight: bolder;
+    }
+
+    p {
+      width: 80%;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    .reserveBtn {
+      background-color: $blue-color;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      color: #efefef;
+    }
+
+    .cancelBtn {
+      background-color: rgb(255, 0, 0);
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: 1px solid #fff;
+      color: #efefef;
+    }
+
+    button {
+      width: 20%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: #fff;
+      box-shadow: -1px -1px 12px 2px rgba(53, 162, 250, 0.59);
+      -webkit-box-shadow: -1px -1px 12px 2px rgba(53, 162, 250, 0.59);
+      -moz-box-shadow: -1px -1px 12px 2px rgba(53, 162, 250, 0.59);
+    }
+
+    .cancelBtn:hover {
+      box-shadow: -1px -1px 12px 2px rgba(255, 0, 0, 0.59);
+      -webkit-box-shadow: -1px -1px 12px 2px rgba(255, 0, 0, 0.59);
+      -moz-box-shadow: -1px -1px 12px 2px rgba(255, 0, 0, 0.59);
+    }
+
+    .desc-wraper {
+      display: flex;
+      width: 100%;
+
+      p {
+        width: 100%;
+      }
+    }
+
+    .desc-txt {
+      line-height: 1.2;
+    }
+  }
+}
