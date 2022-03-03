@@ -33,12 +33,40 @@ describe('Rockets and profile rockets', () => {
   });
 });
 
-it('NavBar changes the section', async () => {
-  render(<App />);
+describe('Missions and Profile Missions', () => {
+  it('NavBar changes the section', async () => {
+    render(<App />);
 
-  fireEvent.click(screen.getByText('Missions'));
+    fireEvent.click(screen.getByText('Missions'));
 
-  await waitFor(() => screen.getByText('Thaicom'));
+    await waitFor(() => screen.getByText('Thaicom'));
 
-  expect(screen.getByTestId('missions-section')).toMatchSnapshot();
+    expect(screen.getByTestId('missions-section')).toMatchSnapshot();
+  });
+
+  it('Join display active member badge', async () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByText('Missions'));
+
+    const btn = await waitFor(() => screen.getByTestId('9D1B7E0'));
+
+    fireEvent.click(btn);
+
+    expect(screen.getByText('active member')).toBeInTheDocument();
+  });
+
+  it('Join display active member badge', async () => {
+    render(<App />);
+
+    fireEvent.click(screen.getByText('Missions'));
+
+    const btn = await waitFor(() => screen.getByTestId('9D1B7E0'));
+
+    fireEvent.click(btn);
+
+    fireEvent.click(screen.getByText('My profile'));
+
+    expect(screen.getByText('Thaicom')).toBeInTheDocument();
+  });
 });

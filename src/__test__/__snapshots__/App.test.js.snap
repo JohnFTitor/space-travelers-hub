@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavBar changes the section 1`] = `
+exports[`Missions and Profile Missions NavBar changes the section 1`] = `
 <section
   class="missions"
   data-testid="missions-section"
@@ -44,6 +44,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="9D1B7E0"
             id="9D1B7E0"
             type="button"
           >
@@ -72,6 +73,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="F4F83DE"
             id="F4F83DE"
             type="button"
           >
@@ -100,6 +102,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="F3364BF"
             id="F3364BF"
             type="button"
           >
@@ -128,6 +131,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="EE86F74"
             id="EE86F74"
             type="button"
           >
@@ -156,6 +160,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="6C42550"
             id="6C42550"
             type="button"
           >
@@ -184,6 +189,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="FE3533D"
             id="FE3533D"
             type="button"
           >
@@ -212,6 +218,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="593B499"
             id="593B499"
             type="button"
           >
@@ -240,6 +247,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="CE91D46"
             id="CE91D46"
             type="button"
           >
@@ -268,6 +276,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="2CF444A"
             id="2CF444A"
             type="button"
           >
@@ -296,6 +305,7 @@ exports[`NavBar changes the section 1`] = `
           class="join"
         >
           <button
+            data-testid="F7709F2"
             id="F7709F2"
             type="button"
           >
