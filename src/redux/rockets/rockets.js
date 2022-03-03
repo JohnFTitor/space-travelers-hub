@@ -1,5 +1,6 @@
 const ADD_ROCKET = 'spaceTravelersHub/rockets/ADD_ROCKET';
 const RESERVE = 'spaceTravelersHub/rockets/RESERVE';
+const CANCEL_RESERVE = 'spaceTravelersHub/rockets/CANCEL_RESERVE';
 
 const initialState = [];
 
@@ -9,7 +10,12 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
     case RESERVE: {
       const newState = [...state];
-      newState[action.payload - 1].reserved = !newState[action.payload - 1].reserved;
+      newState[action.payload - 1].reserved = true;
+      return newState;
+    }
+    case CANCEL_RESERVE: {
+      const newState = [...state];
+      newState[action.payload - 1].reserved = false;
       return newState;
     }
     default:
@@ -29,7 +35,12 @@ const reserveRocket = (id) => ({
   payload: id,
 });
 
-export { reserveRocket };
+const cancelRocket = (id) => ({
+  type: CANCEL_RESERVE,
+  payload: id,
+});
+
+export { reserveRocket, cancelRocket };
 
 export function filterRocketInfo() {
   return (dispatch) => {
