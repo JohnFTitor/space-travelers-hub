@@ -16,7 +16,7 @@ const MissionsPage = () => {
   }, [status, dispatch]);
 
   return (
-    <section className="missions">
+    <section data-testid="missions-section" className="missions">
       <table>
         <thead>
           <tr>

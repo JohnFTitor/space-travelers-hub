@@ -22,7 +22,7 @@ function RocketBadge({ reserved, id }) {
       cancel reservation
     </button>
   ) : (
-    <button className="reserveBtn" type="button" onClick={clickHandlerReserve} id={id}>
+    <button data-testid={id.toString(10)} className="reserveBtn" type="button" onClick={clickHandlerReserve} id={id}>
       reserve rocket
     </button>
   );
